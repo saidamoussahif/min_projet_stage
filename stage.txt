@@ -1,0 +1,102 @@
+ <section class="allContents">
+        <div class="overlay" id="overlayID">
+        </div>
+        <!-- Users Details -->
+        <div class="tableContents">
+            <table>
+                <caption>list des utilisateurs</caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date de création</th>
+                        <th>Etat</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Nom d'utilisateur</th>
+                        <th>Matricule</th>
+                        <th>Acion</th>
+                    </tr>
+                </thead>
+                <tbody id="usersData">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <!-- add user btn -->
+        <div class="addUserContents">
+            <div class="contents">
+                <button class="addUserBtn" id="showUserForm">Ajouter utilisateur</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal form -->
+    <div class="modalClass" id="displayModal">
+        <div class="modalBody">
+            <h2>Ajout d'utilisateur</h2>
+            <form action="#" id="submitFormID">
+                <div class="formInputW30 formInput">
+                    <label for="fname">Nom</label><br>
+                    <input type="text" id="fname" name="fname" required><br>
+                </div>
+                <div class="formInputW30 formInput">
+                    <label for="lname">Prénom</label><br>
+                    <input type="text" id="lname" name="lname" required>
+                </div>
+                <div class="formInputW30 formInput">
+                    <!-- <label for="status">Etat</label><br>
+                    <input type="text" id="status" name="status" required> -->
+                    <label for="status">Etat</label><br>
+                    <select id="status" name="status" required>
+                        <option value="selectioner votre etat" disabled selected>selectioner votre etat</option>
+                        <option value="En validation">En validation</option>
+                        <option value="Validé">Validé</option>
+                        <option value="Rejeté">Rejeté</option>
+                    </select>
+                </div>
+ *
+                <div class="formInputW30 formInput">
+                    <label for="name">Nom d'utilisateur</label><br>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="formInputW60 formInput">
+                    <label for="createAt">Date de création</label><br>
+                    <input type="datetime-local" id="createAt" name="createAt" required>
+                </div>
+                <div class="formInputW30 formInput">
+                    <label for="maticule">Matricule</label><br>
+                    <input type="text" id="maticule" name="maticule" required>
+                </div>
+
+                <div class="formInputW60 errors">
+                    <ul id="errorsList">
+                        <!-- <li>le nom doit contain 2 character minimaux</li> -->
+                    </ul>
+                </div>
+
+                <input type="submit" class="submitBtn" value="Enregistrer">
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal delete user -->
+    <div class="modalClass" id="displayDeleteModal">
+        <div class="modalBody">
+            <h2>voulez vous suprimer cet utilisateur</h2>
+            <div class="OuiNonBtn">
+                <button id="confirmDeleteUser">OUI</button>
+                <button id="cancelDeleteUser">NON</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+ <!-- <script type="module" src="./js/getUsers.js"></script>
+    <script type="module" src="./js/script.js"></script>
+    <script src="./js/deleteUser.js"></script> -->
